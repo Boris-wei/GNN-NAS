@@ -1,0 +1,38 @@
+dataset:
+  edge_encoder: true
+  edge_encoder_name: Bond
+  format: OGB
+  name: ogbg-molhiv
+  node_encoder: true
+  node_encoder_name: Atom
+  task: graph
+  task_type: regression
+gnn:
+  act: relu
+  agg: mean
+  batchnorm: true
+  dim_inner: 128
+  dropout: 0.0
+  layer_type: generalconv
+  layers_mp: 2
+  layers_post_mp: 1
+  normalize_adj: false
+  stage_type: stack
+metric_agg: argmin
+metric_best: mse
+model:
+  edge_decoding: dot
+  graph_pooling: add
+  loss_fun: mse
+  type: gnn
+optim:
+  base_lr: 0.0007
+  max_epoch: 80
+  optimizer: sgd
+out_dir: results/proxy1_grid_proxy_mod_small
+round: 6
+train:
+  batch_size: 128
+  ckpt_period: 80
+  eval_period: 1
+  sampler: full_batch
