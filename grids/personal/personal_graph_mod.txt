@@ -1,0 +1,11 @@
+# Format for each row: name in config.py; alias; range to search
+# No spaces, except between these 3 fields
+# Line breaks are used to union different grid search spaces
+# Feel free to add '#' to add comments
+
+
+train.batch_size batch_size [32,64,128]
+gnn.layers_mp l_mp [2,4,6]
+gnn.stage_type stage ['stack','skipsum','skipconcat']
+gnn.dim_inner dim [64,128,256]
+optim.base_lr lr [0.1,0.01,0.001]

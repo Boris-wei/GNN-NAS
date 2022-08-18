@@ -1,0 +1,6 @@
+gnn.layers_mp l_mp [2,3,4]
+gnn.stage_type stage ['stack','skipsum','skipconcat']
+gnn.dim_inner dim [64,128,256]
+gnn.act act ['relu','swish']
+
+
